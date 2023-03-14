@@ -53,10 +53,10 @@ public class CurrencyConverterFX {
             BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
             String line = reader.readLine();
             reader.close();
-            return Double.parseDouble(line.split("\"")[3].replace(",", "."));
+            return Double.parseDouble(line.split("\"")[9].replace(",", "."));
         } catch (Exception e) {
+            e.printStackTrace();
             return 5.50;
         }
     }
 }
-
